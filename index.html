@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding KUA💖 </title>
+    <!-- favicon -->
+    <link rel="icon" href="">
+    <!-- bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- lightbox2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" 
+    integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="overflow-hidden">
+    <!-- music -->
+    <audio src="assets/audio/Ana Uhibbuka Fillah.mp3" loop class="music"></audio>
+    <!-- sfx door -->
+    <audio src="assets/audio/Door.mp3" class="sound-door"></audio>
+
+    <!-- door section -->
+    <div id="door-section" class="open" onclick="mulai()">
+      <h1 class="heading-door bottom text-center huruf-sambung">K & A</h1>
+      <!-- <h1 class="heading-door bottom text-center huruf-sambung">A</h1> -->
+      <div class="doors">
+        <div class="door left">
+          <img src="assets/img/door-left.png" alt="left door">
+        </div>
+        <div class="door right">
+          <img src="assets/img/door-right.png" alt="right door">
+        </div>
+      </div>
+    </div>
+
+    <!-- content section -->
+    <div id="content-section">
+      <!-- navbar -->
+      <ul class="nav">
+        <span class="music"></span>
+        <li>
+          <a href="#acara-section">
+            <i class="fas fa-fw  fa-calendar-day"></i> <!--icon calendar day-->
+          </a>
+        </li>
+        <li>
+          <a href="#lokasi-section">
+            <i class="fas fa-fw fa-location-dot"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#love-story-section">
+            <i class="fas fa-fw fa-heart"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item-music rotate" id="music-button" onclick="toggleMusic(event)">
+            <i class="fas fa-fw fa-compact-disc"></i>          
+          </a>
+        </li>
+        <li>
+          <a href="#galery-section">
+            <i class="fas fa-fw fa-image"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gift-section">
+            <i class="fas fa-fw fa-gift"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#rsvp-section">
+            <i class="fas fa-fw fa-check-to-slot"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- hero section -->
+    <section id="hero-section" class="d-flex align-items-center">
+      <img src="assets/img/sparkle.gif" alt="sparkle" class="sparkle">
+      <!-- <iframe src="https://giphy.com/embed/l1J9EQhfkb8tPu836" class="sparkle"></iframe> -->
+      <div class="container text-center">
+        <h4 class="my-2 text-white">Kepada <span id="nama-sambutan"></span></h4>
+        <h1 class="my-2 text-white huruf-sambung">K & A</h1>
+        <h4 class="my-2 text-white">Akan segera melangsungkan pernikahan pada tanggal</h4>
+        <h4 class="my-2 text-white fw-bold">Ahad, 25 Mei 2025</h4>
+        <div class="row my-3 d-flex justify-content-center" id="countdown-wedding">
+          <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Hari</div></div>
+          <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Jam</div></div>
+          <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Menit</div></div>
+          <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Detik</div></div>
+        </div>
+        <a href="#pembuka-section" class="rounded-pill btn btn-lg btn-get-started py-3"> 
+          <i class="fas fa-fw fa-envelope-open-text"></i>Buka Undangan</a>
+      </div>
+    </section>
+    
+
+    <!-- pembuka section -->
+    <section id="pembuka-section" class="pembuka-section section-bg py-5">
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500s">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title text-center">
+              <h1 class="text-pink huruf-sambung fw-bold">ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</h1>
+              <h3>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h3>
+              <p> "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu 
+                sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan 
+                sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum 
+                yang berpikir."</p>
+                <p>QS Ar-Rum:21</p>
+            </div>
+            
+            <div class="row my-4 justify-content-center"> 
+              <!-- <div class="col-lg-8 text-center"  data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500s"> -->
+                <!-- <img src="assets/img/images.jpeg" alt="wedding" class="img-fluid rounded-pill"> -->
+              </div>
+            </div>
+
+            <div class="row my-3 justify-content-between">
+             <!-- Pengantin Perempuan -->
+              <div class="col rounded"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="p-2 pt-3 text-center">
+                  <img src="assets/img/K.jpeg" alt="wedding" class="img-fluid rounded-pill">
+                  <h1 class="text-center huruf-sambung">KAU</h1>
+                  <h3 class="text-center fw-bold">Aku dan Kamu</h3>
+                  <p>Putri dari pasangan</p>
+                  <p>Bapakkkkkk AAAA & Ibuuu BBBB</p>
+                </div>
+              </div>
+              <!-- Pemisah -->
+              <div class="col-sm-1 my-auto" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 class="text-center huruf-sambung"> & </h1>
+              </div>
+              <!-- Pengantin Laki-Laki -->
+              <div class="col rounded"  data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="p-2 pt-3 text-center">
+                  <img src="assets/img/A.jpeg" alt="wedding" class="img-fluid rounded-pill">
+                  <h1 class="text-center huruf-sambung">AKU</h1>
+                  <h3 class="text-center fw-bold">Kamu dan Aku</h3>
+                  <p>Putra dari pasangan</p>
+                  <p>Bapakkkkkk CCCC & Ibuuu DDDD</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <!-- acara section -->
+    <section id="acara-section" class="acara-section py-5 "> <!--tidak perlu ditambahkan mb-5 karena masih ada lanjutannya-->
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h1 class="text-pink huruf-sambung fw-bold">Acara Pernikahan</h1>
+              <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami</p>
+            </div>
+            <div class="row justify-content-between px-3 text-center">
+              <div class="col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                <h4>Akad Nikah</h4>
+                <hr>
+                <p> <i class="fas fa-fw fa-calendar-day"></i>Ahad, 25 Mei 2025</p>
+                <p> <i class="fas fa-fw fa-clock"></i>08:00 - 10:00 WIB</p>
+                <p> <i class="fas fa-fw fa-location-dot"></i>Gedung Masa Depan Kita</p>
+                <!-- link untuk generator calendar : https://decomaan.github.io/google-calendar-link-generator/ -->
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+AK&details=Akad+Nikah+%23KUA&location=Gedung+Masa+Depan+Kami&dates=20250525T010000Z%2F20250525T050000Z" 
+                class="btn btn-lg btn-pink rounded-pill" target="_blank">
+                  <i class=" fas fa-fw fa-calendar-day"></i>Simpan ke Kalender</a>
+              </div>
+
+              <div class="col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                <h4>Resepsi</h4>
+                <hr>
+                <p> <i class="fas fa-fw fa-calendar-day"></i>Ahad, 25 Mei 2025</p>
+                <p> <i class="fas fa-fw fa-clock"></i>10:00 WIB - Selesai</p>
+                <p> <i class="fas fa-fw fa-location-dot"></i>Gedung Masa Depan Kita</p>
+                <!-- link untuk generator calendar : https://decomaan.github.io/google-calendar-link-generator/ -->
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+AK&details=Akad+Nikah+%23KUA&location=Gedung+Masa+Depan+Kami&dates=20250525T010000Z%2F20250525T050000Z" 
+                class="btn btn-lg btn-pink rounded-pill" target="_blank">
+                  <i class=" fas fa-fw fa-calendar-day"></i>Simpan ke Kalender</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lokasi Section -->
+    <section id="location-section" class="lokasi-section py-5 section-bg">
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h1 class="text-pink huruf-sambung fw-bold">Lokasi Akad & Resepsi Pernikahan</h1>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-12 text-center">
+                <a href="https://maps.app.goo.gl/gGH9EMZ7dYivcddf8" target="_blank" class="btn btn-lg btn-pink rounded-pill mb-4">
+                  <i class="fas fa-fw fa-location-dot"></i>Klik untuk Membuka Peta</a>
+                  <iframe class="mb-4 mb-lg-0 border-pink" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255008.85379576075!2d104.59815148096595!3d-2.9549563463367114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75e8fc27a3e3%3A0x3039d80b220d0c0!2sPalembang%2C%20Palembang%20City%2C%20South%20Sumatra!5e0!3m2!1sen!2sid!4v1734849423488!5m2!1sen!2sid" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- love story section -->
+    <section id="love-story-section" class="love-story-section py-5">
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="section-title">
+          <h1 class="text-pink huruf-sambung fw-bold">Love Story</h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg">
+            <ul class="timeline">
+              <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="timeline-badge" style="background-image: url('assets/img/timeline/timeline-1.jpg');">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Awal Mula Jumpa</h3>
+                    <span class="timeline-date">18 Maret 2018</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>NCT 2018 Empathy adalah album studio debut dari boyband Korea Selatan NCT. Album ini dirilis pada 14 Maret 2018, oleh SM Entertainment dan iriver Inc. Album ini secara total berisi empat belas lagu, dengan dua belas lagu yang sebelumnya dirilis sebagai singel dari 2016 hingga 2018.                   
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="timeline-badge" style="background-image: url('assets/img/timeline/timeline-2.jpg');">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Pertemanan Tumbuh</h3>
+                    <span class="timeline-date">4 Desember 2020</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>NCT 2020 Resonance is the second studio album by South Korean boy band NCT, 
+                      an unlimited group project under the management of SM Entertainment                  
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="timeline-badge" style="background-image: url('assets/img/timeline/timeline-3.jpg');">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Menjalin Pendekatan</h3>
+                    <span class="timeline-date">28 Juni 2021</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Hello Future is a repackage of NCT DREAM's first full-length album Hot Sauce. 
+                      It was released on June 28, 2021 with "Hello Future" serving as the album's title track. </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="timeline-badge" style="background-image: url('assets/img/timeline/timeline-4.jpg');">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Pengakuan Perasaan</h3>
+                    <span class="timeline-date">25 Oktober 2021</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>niverse adalah album studio ketiga dari grup vokal pria Korea Selatan NCT, boy band dibawah SM Entertainment. 
+                      Sebagai tindak lanjut dari NCT 2020 Resonance, NCT 2021 Universe adalah bagian proyek grup NCT 2021 yang melihat 
+                      semua anggota NCT saat ini di semua unit berkolaborasi dalam rilis berdurasi penuh. Album ini menampilkan 21 dari 23 
+                      total anggota dari tiga unit saat ini NCT—NCT 127, NCT Dream, dan WayV.                
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="timeline-badge" style="background-image: url('assets/img/timeline/timeline-5.jpg');">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Perjalanan Bersama</h3>
+                    <span class="timeline-date">17 November 2023</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>ISTJ adalah album studio ketiga dari grup vokal pria Korea Selatan NCT Dream. 
+                      Album ini akan dirilis pada tanggal 17 Juli 2023, oleh SM Entertainment melalui Kakao Entertainment, 
+                      album ini terdiri dari 10 lagu dengan singel pendukung "Broken Melodies" dan "ISTJ".                   
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"> 
+                <div class="timeline-badge" style="background-image: url('assets/img/timeline/timeline-6.jpg');">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Menuju Halal</h3>
+                    <span class="timeline-date">11 November 2024</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Dreamscape adalah album studio keempat dari grup vokal pria NCT Dream. Album ini dirilis pada tanggal 
+                      11 November 2024, oleh SM Entertainment melalui Kakao Entertainment, album ini terdiri dari 11 lagu, 
+                      termasuk lagu yang dirilis sebelumnya "Rains in Heaven" dan singel utama "When I'm with You".                  
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="gallery-section" class="gallery-section py-5 section-bg">
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="section-title">
+          <h1 class="huruf-sambung text-pink fw-bold">Gallery</h1>
+        </div>
+        <div class="row" data-mansory='{"percentPosition": true}'>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/1.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/1.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/2.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/2.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/3.jpeg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/3.jpeg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/4.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/4.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/5.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/5.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/6.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/6.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/7.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/7.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/8.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/8.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <a href="assets/img/gallery/9.jpg" data-lightbox="KUA" class="text-decoration-none">
+              <img src="assets/img/gallery/9.jpg" alt="K & A" class="card-img border-pink">
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <iframe class="border-pink" width="100%" height="500" src="https://www.youtube.com/embed/cfYhBLDWlvw?si=BJnhz6ZkwL0SBthZ" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gift section -->
+    <section id="gift-section" class="gift-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h1 class="huruf-sambung text-pink fw-bold">Wedding Gift</h1>
+              <p>Kehadiran dan Doa Restu Bapak/Ibu/Saudara/i merupakan anugerah terindah bagi kami. Namun, apabila 
+                Bapak/Ibu/Saudara/i tidak dapat hadir dan hendak memberikan tanda kasih kepada kami, dapat menggunakan fitur dibawah ini
+              </p>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center">
+                <button type="button" class="text-center btn btn-lg btn-pink mb-4 rounded-pill" data-bs-toggle="collapse"
+                data-bs-target="#collapseHadiah"><i class="fas fa-fw fa-gift"></i>Kirim Hadiah</button>
+                <div class="collapse" id="collapseHadiah">
+                  <div class="my-4 mx-auto position-relative credit-card">
+                    <img src="assets/img/card/bri.png" alt="Logo BRI" class="card-logo">
+                    <div class="card-container">
+                      <img src="assets/img/card/sim.png" alt="sim" class="card-sim">
+                      <div class="card-number">12345678889</div>
+                    </div>
+                    <div class="card-name mt-2">Rekeningku</div>
+                    <a style="cursor : pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                    <i class="fas fa-fw fa-copy"></i>Copy</a>
+                  </div>
+
+                  <div class="my-4 mx-auto position-relative credit-card">
+                    <img src="assets/img/card/dana.png" alt="Logo Dana" class="card-logo">
+                    <div class="card-container">
+                      <img src="assets/img/card/sim.png" alt="sim" class="card-sim">
+                      <div class="card-number">999 1122 22229</div>
+                    </div>
+                    <div class="card-name mt-2">Rekeningku</div>
+                    <a style="cursor : pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                    <i class="fas fa-fw fa-copy"></i>Copy</a>
+                  </div>
+
+                  <div class="my-4 mx-auto position-relative credit-card">
+                    <img src="assets/img/card/gift.png" alt="Logo Gift" class="card-logo">
+                    <div class="card-container">
+                      <!-- <img src="assets/img/card/sim.png" alt="sim" class="card-sim"> -->
+                      <div class="card-number">
+                        <p class="gift-paket">Jl. Bahagia 123 Selamanya, Bahagia, Indonesia</p> </div>
+                    </div>
+                    <div class="card-name mt-2">Kantor gua nih bos</div>
+                    <a style="cursor : pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                    <i class="fas fa-fw fa-copy"></i>Copy</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>     
+      </div>
+    </section>
+
+    <!-- rsvp section -->
+    <section id="rsvp-section" class="rsvp-section py-5 section-bg">
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h1 class="huruf-sambung text-pink fw-bold">Konfirmasi Kehadiran</h1>
+              <p>Isi form dibawah ini untuk melakukan konfirmasi kehadiran</p>
+            </div>
+            <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"  
+            method="POST" 
+            action="https://script.google.com/macros/s/AKfycbxC1sXTziaWe2X7fB_gxMWbP_o3af6vKs9YZ4fPWY4V87TGPyczsamDktdjCVvRW2w/exec" 
+            id="my-form">
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="nama" name="nama">
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="jumlahKehadiran" class="form-label">Jumlah</label>
+                  <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="1">
+                </div>
+              </div>           
+            
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="status" class="form-label">Konfirmasi</label>
+                  <select name="status" id="status" class="form-select" >
+                    <option selected>Pilih salah satu</option>
+                    <option value="1">Hadir</option>
+                    <option value="2">Tidak Hadir</option>
+                  </select>
+                </div>
+              </div>
+            
+              <div class="col-12 " style="margin-top: 35px;" >
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- wish section -->
+    <section id="wish-section" class="wish-section py-5">
+      <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h1 class="huruf-sambung text-pink fw-bold">Wish</h1>
+              <p>Berikan ucapan dan doa untuk kami.</p>
+            </div>
+            
+            <div class="row justify-content-between px-3 text-center">
+              <div class="col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center" 
+                method="POST" 
+                action="https://script.google.com/macros/s/AKfycbx5r7VPiG58ZYTUm0q-hlHjr1ZP2sKv7TXECpctcm_4lmo1d85pM7lz9Xw1jguoRm8/exec" 
+                id="my-form-wish">
+                  <div class="col-12">
+                    <label class="visually-hidden" for="nama">Nama</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="visually-hidden" for="ucapan">Ucapan</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="ucapan" placeholder="Ucapan" name="ucapan">
+                    </div>
+                  </div>
+                  <div class="col-12 " style="margin-top: 35px;" >
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
+                </form>                
+              </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <!-- closing section -->
+    <section id="closing-section" class="closing-section py-5">
+      <img src="assets/img/sparkle.gif" alt="sparkle" class="sparkle">
+      <!-- <iframe src="https://giphy.com/embed/l1J9EQhfkb8tPu836" class="sparkle"></iframe> -->
+      <div class="container text-center">
+        <h4 class="my-2 text-pink fw-bold">Thank You</h4>
+        <h1 class="my-2 text-pink huruf-sambung fw-bold">K & A</h1>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section id="footer" class="footer py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col text-center mb-4">
+            <small class="block justify-content-center">&copy;2024 Kinkareine. All Right Reserved <br></small>
+            <small class="block">Design by <a href="https://instagram.com/kinkareine">Kintan Karina</a><br><hr> </small>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <!-- jquery3 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+    <!-- bootstrap5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Install plugin lightbox2 (plugin galeri) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" 
+    integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- install plugin sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.3/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Memasang plugin mansori bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" 
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" 
+    async></script>
+
+    <!-- js -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
