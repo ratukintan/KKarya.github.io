@@ -283,6 +283,13 @@ body.transition {
     }
 }
 
+ /*Mobile Phone*/
+ @media(max-width : 480px){
+    .door .card-acara {
+        max-width: 100%;
+    }
+ }
+
 .btn-pink {
     font-family: sans-serif;
     text-transform: uppercase;
@@ -449,6 +456,7 @@ body.transition {
         height: 60px;
         margin-left: -20px !important;
     }
+    overflow-x: hidden;
 }
 
 @media(max-width: 992px) {
